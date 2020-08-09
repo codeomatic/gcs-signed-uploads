@@ -4,8 +4,8 @@ services:
 
   gcs-signed-upload:
     container_name: ${SERVICE_NAME}
-    build: ./
     image: ${SERVICE_NAME}:latest
+    build: ./
     #read_only: true
     environment:
       - PORT=${PORT}
