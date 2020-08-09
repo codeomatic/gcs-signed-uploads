@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+
+  gcs-signed-upload:
+    container_name: ${SERVICE_NAME}
+    build: ./
+    image: ${SERVICE_NAME}:latest
+    #read_only: true
+    environment:
+      - PORT=${PORT}
+      - BUCKET=${BUCKET}
+    ports:
+      - "${PORT}:${PORT}"
