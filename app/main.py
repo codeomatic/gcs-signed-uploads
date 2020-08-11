@@ -50,7 +50,7 @@ def signed_upload_url():
     blob = bucket().blob(prefixed_filename)
     url = blob.generate_signed_url(
         expiration=datetime.timedelta(minutes=60),
-        method='POST', version="v4")
+        method='PUT', version="v4")
 
     response['status'] = 'ok'
     response['result'] = url
